@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: APIGateway
+  cloud:
+    gateway:
+      routes:
+        - id: UserService
+          uri: http://localhost:8081 # Change to lb://USER-SERVICE if using Eureka
+          predicates:
+            - Path=/api/users/**, /api/auth/**
+
+jwt:
+  secret: "5+O5cBwqsW82EssHRH0ex0KBxPMBzm5h18yCUd5lxD8="

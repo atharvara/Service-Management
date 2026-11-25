@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: UserService
+jwt:
+  secret: "5+O5cBwqsW82EssHRH0ex0KBxPMBzm5h18yCUd5lxD8="
+
+
